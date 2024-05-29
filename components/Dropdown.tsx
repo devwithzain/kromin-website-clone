@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiChevronDown } from "react-icons/fi";
 import { Dispatch, SetStateAction, useState } from "react";
-import { iconVariants, itemVariants, wrapperVariants } from "@/motion";
+import { iconVariants, itemVariants, wrapperVariants } from "@motion";
 
 export default function StaggeredDropDown() {
 	const [open, setOpen] = useState(false);

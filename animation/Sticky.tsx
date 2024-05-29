@@ -29,7 +29,7 @@ export default function Sticky() {
 
 	return (
 		<motion.div
-			className="w-[30px] h-[30px] fixed rounded-full bg-[#ae48f657] pointer-events-none z-50"
+			className="w-[30px] h-[30px] fixed rounded-full bg-[#ae48f657] pointer-events-none z-50 sm:hidden xm:hidden flex"
 			style={{
 				left: smoothMouse.x,
 				top: smoothMouse.y,

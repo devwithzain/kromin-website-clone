@@ -2,7 +2,11 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function CTA() {
 	return (
-		<div className="w-full padding-y bg-[#A340F4]">
+		<div
+			className="w-full padding-y"
+			style={{
+				background: "linear-gradient(90deg, #A340F4 0%, #C183F6 100%)",
+			}}>
 			<div className="w-[70%] sm:w-full xm:w-full padding-x sm:flex-col xm:flex-col mx-auto flex items-center justify-between gap-4">
 				<div className="flex flex-col gap-2">
 					<h1 className="text-[32px] text-white leading-none tracking-wider font-bold">

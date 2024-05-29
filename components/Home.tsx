@@ -1,15 +1,5 @@
 "use client";
-import {
-	CTA,
-	Experience,
-	Footer,
-	Glance,
-	Hero,
-	NewsLetter,
-	Partner,
-	Result,
-	Services,
-} from "@components";
+import { CTA, Footer, Hero, Portfolio, Services } from "@components";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import { Sticky } from "@animation";
@@ -27,26 +17,12 @@ export default function Home() {
 	}, []);
 	return (
 		<>
-			<div className="sm:hidden xm:hidden flex">
-				<Sticky />
-			</div>
-			<div className="">
-				<Hero />
-				{/* <div className="padding-x">
-					<Experience />
-				</div>
-				<Partner />
-				<Glance />
-				<Services />
-				<div className="padding-x">
-					<Result />
-				</div>
-				<NewsLetter />
-				*/}
-				<div className="">
-					<CTA />
-				</div>
-			</div>
+			<Sticky />
+			<Hero />
+			<Services />
+			<Portfolio />
+			<CTA />
+			<Footer />
 		</>
 	);
 }

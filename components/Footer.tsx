@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { navLinks } from "@constants";
 import { motion } from "framer-motion";
 import { footerVarient } from "@motion";
-import { navLinks } from "@constants";
 import { footerImage, logo } from "@public";
-import { CiLocationOn, CiPhone } from "react-icons/ci";
-import { MdOutlineEmail } from "react-icons/md";
-import { SlSocialFacebook, SlSocialLinkedin } from "react-icons/sl";
 import { FaInstagram } from "react-icons/fa6";
+import { MdOutlineEmail } from "react-icons/md";
+import { CiLocationOn, CiPhone } from "react-icons/ci";
+import { SlSocialFacebook, SlSocialLinkedin } from "react-icons/sl";
 
 export default function Footer() {
 	return (
