@@ -23,6 +23,10 @@ body {
 	font-family: ProximaNova-Black;
 }
 @font-face {
+	src: url("../font/muli.woff");
+	font-family: Muli;
+}
+@font-face {
 	src: url("../font/ProximaNova-Regular.otf");
 	font-family: ProximaNova;
 }

@@ -19,3 +19,6 @@ export { default as partner17 } from './partner17.png';
 export { default as partner18 } from './partner18.png';
 export { default as partner19 } from './partner19.png';
 export { default as footerImage } from './footer-image.svg';
+export { default as digital } from './digital.svg';
+export { default as potential } from './potential.svg';
+export { default as compony } from './compony.svg';
