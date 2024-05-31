@@ -49,7 +49,7 @@ body {
 	}
 
 	.sub-heading {
-		@apply text-[26px] md:text-[22px] sm:text-[18px] xm:text-[15px];
+		@apply text-[18px] md:text-[16px] sm:text-[14px] xm:text-[14px];
 	}
 
 	.paragraph {

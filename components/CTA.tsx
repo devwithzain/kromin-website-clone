@@ -18,12 +18,12 @@ export default function CTA() {
 					</p>
 				</div>
 				<div className="w-fit sm:w-full xm:w-full flex items-center justify-between gap-6 bg-white px-6 py-3 rounded-full group">
-					<p className="text-[18px] cursor-pointer text-black uppercase tracking-wider font-bold">
+					<p className="text-[18px] cursor-pointer text-[#1d0f41] uppercase tracking-wider font-bold">
 						Contact Us
 					</p>
 					<FaArrowRightLong
 						size={25}
-						className="group-hover:translate-x-1 duration-200 ease-in-out"
+						className="group-hover:translate-x-1 duration-200 ease-in-out text-[#1d0f41]"
 					/>
 				</div>
 			</div>

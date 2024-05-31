@@ -167,3 +167,38 @@ export const portfolioItems = [
         para: "The 20/24 Digital Business Plan"
     },
 ];
+
+export const servicesPageItem = [
+    {
+        id: 1,
+        title: "Data Analysis & Consulting",
+        link1: "Insights",
+        link2: "Business Research",
+        para: "Through data analysis we identify valuable KPIs and determine what is the best strategy to pursue. Analyzing before doing allows us to create powerful strategies.",
+        btn: "find out more"
+    },
+    {
+        id: 2,
+        title: "Design & Development",
+        link1: "Digital Product",
+        link2: "Websites",
+        para: "We focus not only on the aesthetics of a product but also on what allows its functional use. We develop Digital Products able to automate and simplify the most sophisticated workflows.",
+        btn: "find out more"
+    },
+    {
+        id: 3,
+        title: "Creative Communication",
+        link1: "Social Management",
+        link2: "Video Production",
+        para: "We provide a wide range of high quality creative solutions with great visual impact that enhance the perception of the Brand. We reach the interest of thousands of users through content strategies that exploit the potential of the Brand.",
+        btn: "find out more"
+    },
+    {
+        id: 4,
+        title: "Marketing & Strategy",
+        link1: "Inbound Marketing",
+        link2: "Performance Advertising",
+        para: "We follow our clients along a path aimed at achieving their objectives through Marketing and Performance Advertising strategies capable of engaging the audience, enhancing brand loyalty, increasing sales and profits..",
+        btn: "find out more"
+    },
+];

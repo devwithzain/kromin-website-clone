@@ -47,8 +47,8 @@ export default function Services() {
 							discover our services
 						</motion.p>
 						<FaArrowRightLong
-							size={25}
-							className={`group-hover:translate-x-1 duration-200 ease-in-out text-${textColor}`}
+							size={20}
+							className="group-hover:translate-x-1 duration-200 ease-in-out text-[#b84ff8]"
 						/>
 					</motion.div>
 				</motion.div>
@@ -67,6 +67,7 @@ export default function Services() {
 						<motion.div
 							initial={{ y: 100 }}
 							whileInView={{ y: 0 }}
+							viewport={{ once: true }}
 							transition={{ duration: 1, ease: "easeInOut" }}
 							className="flex flex-col gap-4"
 							key={item.id}>

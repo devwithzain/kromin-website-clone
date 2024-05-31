@@ -1,8 +1,8 @@
 "use client";
-import { CTA, Footer, Hero, Portfolio, Services } from "@components";
 import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
 import { Sticky } from "@animation";
+import Lenis from "@studio-freight/lenis";
+import { CTA, Hero, Portfolio, Services } from "@components";
 
 export default function Home() {
 	useEffect(() => {
@@ -22,7 +22,6 @@ export default function Home() {
 			<Services />
 			<Portfolio />
 			<CTA />
-			<Footer />
 		</>
 	);
 }

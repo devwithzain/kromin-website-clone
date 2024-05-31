@@ -25,23 +25,23 @@ export default function Navbar() {
 	return (
 		<>
 			<motion.nav
-				className="w-[70%] mx-auto flex items-center justify-between h-[10vh] relative top-0 z-10 bg-[#1d0f41] sm:hidden xm:hidden"
+				className="w-full padding-x flex items-center justify-between h-[10vh] z-10 bg-[#1d0f41] sm:hidden xm:hidden"
 				variants={navVariants}
 				animate={hidden ? "hidden" : "vissible"}>
-				<div>
+				<Link href={"/"}>
 					<Image
 						src={logo}
 						alt="logo"
 						width={200}
 						className="w-[200px] object-cover"
 					/>
-				</div>
+				</Link>
 				<div className="flex gap-[15px] sm:hidden xm:hidden">
 					{navLinks.map((item) => (
 						<div key={item.id}>
 							<Link
-								href={"/"}
-								className="text-[16px] font-bold uppercase text-white tracking-widest">
+								href={item.href}
+								className="sub-heading font-bold uppercase text-white tracking-widest">
 								<LinkHover>{item.title}</LinkHover>
 							</Link>
 						</div>

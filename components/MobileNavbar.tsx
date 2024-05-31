@@ -16,12 +16,14 @@ export default function MobileNav() {
 		<div className="w-full items-center justify-between sm:flex xm:flex hidden">
 			<div className="w-full flex items-center justify-between h-[10vh] padding-x">
 				<div className="relative z-[9999]">
-					<Image
-						src={logo}
-						alt="logo"
-						width={200}
-						className="w-[150px] object-cover"
-					/>
+					<Link href={"/"}>
+						<Image
+							src={logo}
+							alt="logo"
+							width={200}
+							className="w-[200px] object-cover"
+						/>
+					</Link>
 				</div>
 				<IoMenu
 					onClick={() => setToggle(!toggle)}

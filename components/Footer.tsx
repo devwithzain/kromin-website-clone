@@ -20,12 +20,14 @@ export default function Footer() {
 			<div className="w-[70%] sm:w-full xm:w-full padding-x mx-auto flex justify-between gap-[50px] sm:flex-col xm:flex-col">
 				<div className="flex justify-between flex-col gap-y-[20px]">
 					<div className="flex flex-col gap-4">
-						<Image
-							src={logo}
-							alt="logo"
-							width={200}
-							className="w-[200px] object-cover"
-						/>
+						<Link href={"/"}>
+							<Image
+								src={logo}
+								alt="logo"
+								width={200}
+								className="w-[200px] object-cover"
+							/>
+						</Link>
 						<p className="text-[16px] text-white tracking-wider font-medium">
 							Let&apos;s create new opportunities together. <br /> Tell us about
 							your vision.
@@ -41,7 +43,7 @@ export default function Footer() {
 						</p>
 					</div>
 				</div>
-				<div className="flex flex-col">
+				<div className="flex flex-col gap-2">
 					<h1 className="text-white text-[24px] font-extrabold uppercase leading-normal">
 						menu
 					</h1>
@@ -71,7 +73,7 @@ export default function Footer() {
 									size={25}
 									className="text-[#A340F4]"
 								/>
-								<p className="text-white tracking-wider text-[16px] leading-normal font-bold">
+								<p className="text-white tracking-wider text-[16px] leading-normal font-medium">
 									+39 0775 15 24 926
 								</p>
 							</div>
@@ -85,7 +87,7 @@ export default function Footer() {
 									size={25}
 									className="text-[#A340F4]"
 								/>
-								<p className="text-white tracking-wider text-[16px] leading-normal font-bold">
+								<p className="text-white tracking-wider text-[16px] leading-normal font-medium">
 									info@kromin.it
 								</p>
 							</div>
