@@ -114,7 +114,7 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-			<div className="absolute right-[5%] bottom-[20%]">
+			<div className="absolute right-[5%] bottom-[20%] sm:hidden xm:hidden">
 				<Image
 					src={footerImage}
 					alt="footerImage"

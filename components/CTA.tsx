@@ -9,15 +9,15 @@ export default function CTA() {
 			}}>
 			<div className="w-[70%] sm:w-full xm:w-full padding-x sm:flex-col xm:flex-col mx-auto flex items-center justify-between gap-4">
 				<div className="flex flex-col gap-2">
-					<h1 className="text-[32px] text-white leading-none tracking-wider font-bold">
+					<h1 className="text-[32px] sm:text-center xm:text-center text-white leading-[38px] tracking-wider font-bold">
 						Do you have a challenge for us?
 					</h1>
-					<p className="text-[16px] text-white tracking-wider font-medium">
+					<p className="text-[16px] sm:text-center xm:text-center text-white tracking-wider font-medium">
 						Let&apos;s create new opportunities together: <br /> tell us about
 						your vision.
 					</p>
 				</div>
-				<div className="w-fit sm:w-full xm:w-full flex items-center justify-between gap-6 bg-white px-6 py-3 rounded-full group">
+				<div className="w-fit flex items-center justify-between gap-6 bg-white px-6 py-3 rounded-full group">
 					<p className="text-[18px] cursor-pointer text-[#1d0f41] uppercase tracking-wider font-bold">
 						Contact Us
 					</p>

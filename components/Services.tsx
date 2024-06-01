@@ -29,8 +29,8 @@ export default function Services() {
 			className="w-full padding-y transition-all duration-500 ease-in-out"
 			ref={container}
 			style={{ backgroundColor: bgColor }}>
-			<motion.div className="w-[70%] mx-auto flex justify-between gap-4 padding-x transition-all duration-500 ease-in-out">
-				<motion.div className="w-1/2 flex flex-col gap-6 sticky top-[10%] h-full">
+			<motion.div className="w-[70%] sm:w-full xm:w-full sm:flex-col xm:flex-col mx-auto flex justify-between gap-4 padding-x transition-all duration-500 ease-in-out">
+				<motion.div className="w-1/2 sm:w-full xm:w-full flex flex-col gap-6 sticky top-[10%] h-full sm:static xm:static">
 					<motion.p className="text-[16px] text-[#b84ff8] leading-none font-semibold">
 						WE WANT TO STAND OUT
 					</motion.p>
@@ -40,7 +40,7 @@ export default function Services() {
 						Why Kromin
 					</motion.h1>
 					<motion.div className="w-[100px] h-[3px] rounded-full bg-[#b84ff8]" />
-					<motion.div className="w-fit sm:w-full xm:w-full flex items-center justify-between gap-6 rounded-full group">
+					<motion.div className="w-fit sm:w-full xm:w-full flex items-center gap-6 rounded-full group">
 						<motion.p
 							className="text-[18px] cursor-pointer uppercase tracking-wider font-bold"
 							style={{ color: textColor }}>
@@ -52,7 +52,7 @@ export default function Services() {
 						/>
 					</motion.div>
 				</motion.div>
-				<motion.div className="w-1/2 flex flex-col gap-20">
+				<motion.div className="w-1/2 sm:w-full xm:w-full flex flex-col gap-20">
 					<motion.p
 						className="font-[Muli] text-[20px] font-normal leading-[40px]"
 						style={{ color: textColor }}>
