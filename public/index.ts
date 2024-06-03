@@ -26,3 +26,4 @@ export { default as idib } from './idib.svg';
 export { default as fuoricitta } from './fuoricitta.svg';
 export { default as luther } from './luther.svg';
 export { default as sweeweb } from './seeweb.svg';
+export { default as heroImg } from './heroImg.svg';

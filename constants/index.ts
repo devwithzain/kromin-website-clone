@@ -144,26 +144,31 @@ export const portfolioItems = [
     {
         id: 1,
         title: "Jago",
+        src: "./jago.mp4",
         para: "The new interactive platform that shows Jago through his Art"
     },
     {
         id: 2,
         title: "Translated",
+        src: "./translated.mp4",
         para: "Professional translation service"
     },
     {
         id: 3,
         title: "Audi Roma",
+        src: "./audi.mp4",
         para: "A new corporate sales process"
     },
     {
         id: 4,
         title: "Maui Jim",
+        src: "./maui.mp4",
         para: "Increase productivity in stores"
     },
     {
         id: 5,
         title: "Acea",
+        src: "./acea.mp4",
         para: "The 20/24 Digital Business Plan"
     },
 ];

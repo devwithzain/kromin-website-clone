@@ -15,13 +15,13 @@ export default function MobileNav() {
 	return (
 		<div className="w-full items-center justify-between sm:flex xm:flex hidden">
 			<div className="w-full flex items-center justify-between h-[10vh] padding-x">
-				<div className="relative z-[9999]">
+				<div>
 					<Link href={"/"}>
 						<Image
 							src={logo}
 							alt="logo"
-							width={200}
-							className="w-[200px] object-cover"
+							width={120}
+							className="w-[120px] object-cover"
 						/>
 					</Link>
 				</div>
@@ -34,12 +34,20 @@ export default function MobileNav() {
 			<AnimatePresence mode="wait">
 				{toggle && (
 					<motion.div
-						initial={{ x: "100%" }}
-						animate={{ x: 0 }}
-						exit={{ x: "100%" }}
+						initial={{ y: "-100%" }}
+						animate={{ y: 0 }}
+						exit={{ y: "-100%" }}
 						transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
 						className="fixed top-0 bottom-0 right-0 z-50 padding-x pb-10 w-full h-screen flex justify-end items-end flex-col shadow-md bg-[#1d0f41]">
-						<div className="w-full flex items-center justify-end h-[10vh]">
+						<div className="w-full flex items-center justify-between h-[10vh]">
+							<Link href={"/"}>
+								<Image
+									src={logo}
+									alt="logo"
+									width={150}
+									className="w-[150px] object-cover"
+								/>
+							</Link>
 							<IoMdClose
 								onClick={() => setToggle(!toggle)}
 								className="text-3xl cursor-pointer text-white"

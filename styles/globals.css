@@ -8,6 +8,37 @@
 	box-sizing: border-box;
 }
 
+.App {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: yellow;
+}
+
+.title {
+	font-size: 10rem;
+}
+
+.cursor {
+	background-color: #111;
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+.hero-gradient {
+	background: linear-gradient(
+		97.86deg,
+		#2b417265 0%,
+		#34acc745 53.65%,
+		#2b417246 100%
+	);
+}
+
 body::-webkit-scrollbar {
 	width: 0;
 }
@@ -22,10 +53,12 @@ body {
 	src: url("../font/ProximaNova-Black.otf");
 	font-family: ProximaNova-Black;
 }
+
 @font-face {
 	src: url("../font/muli.woff");
 	font-family: Muli;
 }
+
 @font-face {
 	src: url("../font/ProximaNova-Regular.otf");
 	font-family: ProximaNova;
@@ -49,7 +82,7 @@ body {
 	}
 
 	.sub-heading {
-		@apply text-[18px] md:text-[16px] sm:text-[14px] xm:text-[14px];
+		@apply text-[17px] md:text-[16px] sm:text-[14px] xm:text-[14px];
 	}
 
 	.paragraph {

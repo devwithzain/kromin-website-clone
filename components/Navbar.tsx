@@ -25,7 +25,7 @@ export default function Navbar() {
 	return (
 		<>
 			<motion.nav
-				className="w-full padding-x flex items-center justify-between h-[10vh] z-10 bg-[#1d0f41] sm:hidden xm:hidden"
+				className="w-full flex items-center justify-between h-[10vh] z-10 sm:hidden xm:hidden padding-x"
 				variants={navVariants}
 				animate={hidden ? "hidden" : "vissible"}>
 				<Link href={"/"}>
