@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { heroImg } from "@public";
-import { Sticky, TextMask } from "@animation";
+import { TextMask } from "@animation";
 import { Navbar, Partner } from "@components";
 
 export default function Hero() {
@@ -13,17 +13,16 @@ export default function Hero() {
 				<div
 					className="flex items-center absolute -left-[10%] justify-center transition-all duration-200 ease-linear"
 					id="container">
-					<div className="h-[400px] blur-[80px] hero-gradient rounded-full w-[400px] sm:w-[300px] xm:w-[300px]" />
+					<div className="h-[400px] blur-[80px] hero-gradient rounded-full w-[400px]" />
 					<Image
 						src={heroImg}
 						alt="hero"
-						className="absolute top-[15%] left-5 transition-all duration-200 ease-linear"
+						className="absolute top-[15%] left-5 transition-all duration-200 ease-linear sm:hidden xm:hidden"
 					/>
 				</div>
 				<div className="w-full flex h-full items-center justify-center flex-col gap-10 overflow-hidden">
-					<h1 className="text-white leading-none text-[80px] font-extrabold text-center font-[ProximaNova-Black]">
-						{/* <TextMask>{phrases}</TextMask> */}
-						<Sticky>asdgashd</Sticky>
+					<h1 className="text-white leading-none text-[80px] sm:text-[60px] xm:text-[60px] font-extrabold text-center font-[ProximaNova-Black]">
+						<TextMask>{phrases}</TextMask>
 					</h1>
 					<p className="sub-heading text-[#b84ff8] text-center tracking-[1.3px] font-bold overflow-hidden">
 						<TextMask>{phrases1}</TextMask>

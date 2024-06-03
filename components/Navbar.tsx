@@ -5,7 +5,7 @@ import { logo } from "@public";
 import { useState } from "react";
 import { navLinks } from "@constants";
 import { navVariants } from "@motion";
-import LinkHover from "@animation/LinkHover";
+import { LinkHover } from "@animation";
 import { MobileNavbar, StaggeredDropDown } from "@components";
 import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 
@@ -15,10 +15,12 @@ export default function Navbar() {
 
 	useMotionValueEvent(scrollY, "change", (latest) => {
 		const previous = scrollY.getPrevious();
-		if (latest > previous) {
-			setHidden(true);
-		} else {
-			setHidden(false);
+		if (previous) {
+			if (latest > previous) {
+				setHidden(true);
+			} else {
+				setHidden(false);
+			}
 		}
 	});
 
@@ -41,7 +43,7 @@ export default function Navbar() {
 						<div key={item.id}>
 							<Link
 								href={item.href}
-								className="sub-heading font-bold uppercase text-white tracking-widest">
+								className="text-[16px] font-bold uppercase text-white tracking-widest">
 								<LinkHover>{item.title}</LinkHover>
 							</Link>
 						</div>
