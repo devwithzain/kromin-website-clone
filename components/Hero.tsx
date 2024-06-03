@@ -53,10 +53,10 @@ export default function Hero() {
 			<Navbar />
 			<div className="w-[70%] sm:w-full xm:w-full relative flex gap-10 items-center padding-x  justify-between">
 				<div className="flex items-center absolute left-[5%] justify-center transition-all duration-200 ease-linear">
-					<div className="h-[400px] blur-[80px] hero-gradient rounded-full w-[400px]" />
+					<div className="h-[400px] blur-[80px] hero-gradient rounded-full w-[400px] sm:w-[300px] xm:w-[300px]" />
 					<div
 						ref={plane1}
-						className="w-full h-full absolute">
+						className="w-full h-full absolute sm:hidden xm:hidden">
 						<Image
 							src={heroImg}
 							alt="image"
