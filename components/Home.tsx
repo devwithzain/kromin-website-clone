@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import { Sticky } from "@animation";
 import Lenis from "@studio-freight/lenis";
 import { CTA, Hero, Portfolio, Services } from "@components";
 
@@ -17,7 +16,6 @@ export default function Home() {
 	}, []);
 	return (
 		<>
-			<Sticky />
 			<Hero />
 			<Services />
 			<Portfolio />
