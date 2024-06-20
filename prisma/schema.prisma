@@ -8,8 +8,7 @@ datasource db {
 }
 
 model Service {
-  id    String @id @default(auto()) @map("_id") @db.ObjectId
-  title String
-  para  String
-  src   String
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
 }
