@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.6.0",
     "@studio-freight/lenis": "^1.0.42",
+    "axios": "^1.7.2",
     "framer-motion": "^11.2.8",
     "gsap": "^3.12.5",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.52.0",
     "react-icons": "^5.2.1",
-    "react-intersection-observer": "^9.10.2"
+    "react-intersection-observer": "^9.10.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@prisma/client": "^5.15.0",
