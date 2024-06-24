@@ -1,8 +1,8 @@
 import { z } from "zod";
 
 export const productSchema = z.object({
-   title: z.string().min(3).max(10),
-   description: z.string().min(3).max(50),
+   title: z.string().min(3),
+   description: z.string().min(10),
 });
 
 export type TproductData = z.infer<typeof productSchema>;

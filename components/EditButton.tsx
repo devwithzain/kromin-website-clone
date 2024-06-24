@@ -23,7 +23,7 @@ export default function EditButton({ id }: { id: any }) {
 	return (
 		<Link
 			onClick={() => editPost(id)}
-			href="#"
+			href={`/admins/${id}`}
 			className="text-[15px] cursor-pointer text-black font-serif font-medium bg-slate-200 px-6 py-3 rounded-lg">
 			Edit
 		</Link>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import prisma from "@/db/prisma";
 import EditButton from "@components/EditButton";
 import DeleteButton from "@components/DeleteButton";
 

@@ -7,12 +7,11 @@ export default function DeleteButton({ id }: { id: any }) {
 	const router = useRouter();
 	const deletePost = async (id: any) => {
 		try {
-			const response = await axios.delete("/api/post", {
+			await axios.delete("/api/post", {
 				data: {
 					id,
 				},
 			});
-			console.log("Data", response.data);
 		} catch (error) {
 			console.log("Error", error);
 		} finally {
