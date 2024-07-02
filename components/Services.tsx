@@ -1,11 +1,20 @@
 "use client";
 import Image from "next/image";
-import { useRef } from "react";
-import { servicesItems } from "@constants";
+import { Service } from "@prisma/client";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 
 export default function Services() {
+	const [data, setData] = useState<Service>();
+	useEffect(() => {
+		async function getData() {
+			const data = await fetch("http://localhost:3000/api/post");
+			const response = await data.json();
+			setData(response);
+		}
+		getData();
+	}, []);
 	const container = useRef(null);
 
 	const { scrollYProgress } = useScroll({
@@ -63,31 +72,35 @@ export default function Services() {
 						The proactivity of our approach facilitates teamwork with our
 						clients, making us proud of what we do.
 					</motion.p>
-					{servicesItems.map((item) => (
-						<motion.div
-							initial={{ y: 100 }}
-							whileInView={{ y: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 1, ease: "easeInOut" }}
-							className="flex flex-col gap-4"
-							key={item.id}>
-							<Image
-								src={item.src}
-								alt={item.title}
-								width={80}
-								height={80}
-								className="w-[80px] h-[80px]"
-							/>
-							<motion.h1 className="text-[18px] leading-none font-extrabold text-[#b84ff8]">
-								{item.title}
-							</motion.h1>
-							<motion.p
-								className="font-[Muli] text-[20px] leading-[40px]"
-								style={{ color: textColor }}>
-								{item.para}
-							</motion.p>
-						</motion.div>
-					))}
+					{data && (
+						<>
+							{data.map((item) => (
+								<motion.div
+									initial={{ y: 100 }}
+									whileInView={{ y: 0 }}
+									viewport={{ once: true }}
+									transition={{ duration: 1, ease: "easeInOut" }}
+									className="flex flex-col gap-4"
+									key={item.id}>
+									<Image
+										src={item.imageUrl}
+										alt={item.title}
+										width={80}
+										height={80}
+										className="w-[80px] h-[80px]"
+									/>
+									<motion.h1 className="text-[18px] leading-none font-extrabold text-[#b84ff8]">
+										{item.title}
+									</motion.h1>
+									<motion.p
+										className="font-[Muli] text-[20px] leading-[40px]"
+										style={{ color: textColor }}>
+										{item.description}
+									</motion.p>
+								</motion.div>
+							))}
+						</>
+					)}
 				</motion.div>
 			</motion.div>
 		</motion.section>

@@ -29,6 +29,7 @@ export default function EditForm({ response }: any) {
 		} finally {
 			reset();
 			router.push("/admins");
+			router.refresh();
 		}
 	};
 

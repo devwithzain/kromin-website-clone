@@ -69,9 +69,9 @@ export default function Hero() {
 					<h1 className="text-white leading-none text-[80px] sm:text-[60px] xm:text-[60px] font-extrabold text-center font-[ProximaNova-Black]">
 						<TextMask>{phrases}</TextMask>
 					</h1>
-					<p className="sub-heading text-[#b84ff8] text-center tracking-[1.3px] font-bold overflow-hidden">
+					<h1 className="sub-heading text-[#b84ff8] text-center tracking-[1.3px] font-bold overflow-hidden">
 						<TextMask>{phrases1}</TextMask>
-					</p>
+					</h1>
 				</div>
 			</div>
 			<div className="w-full pb-6">
