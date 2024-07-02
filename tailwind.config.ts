@@ -15,6 +15,10 @@ const config: Config = {
         secondary: "#00f6ff",
       },
     },
+    fontFamily: {
+      ProximaNova: ["ProximaNova", "sans-serif"],
+      Muli: ["Muli", "sans-serif"],
+    },
     screens: {
       xm: { max: "400px" },
       sm: { min: "401px", max: "768px" },
