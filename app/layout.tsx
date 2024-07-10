@@ -1,7 +1,6 @@
 import "@styles/globals.css";
+import { Footer } from "@components";
 import type { Metadata } from "next";
-import { Footer, RegisterModal, LoginModal } from "@components";
-import ToasterProvider from "@provider/ToastProvide";
 
 export const metadata: Metadata = {
 	title: "Kromin | Data Driven Agency",
@@ -16,9 +15,6 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<ToasterProvider />
-				<RegisterModal />
-				<LoginModal />
 				{children}
 				<Footer />
 			</body>

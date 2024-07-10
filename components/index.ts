@@ -1,5 +1,4 @@
 export { default as Navbar } from './Navbar';
-export { default as AdminNavbar } from './AdminNavbar';
 export { default as Home } from './Home';
 export { default as Footer } from './Footer';
 export { default as Partner } from './Partner';
@@ -9,6 +8,3 @@ export { default as MobileNavbar } from './MobileNavbar';
 export { default as StaggeredDropDown } from './Dropdown';
 export { default as Services } from './Services';
 export { default as Portfolio } from './Portfolio';
-export { default as LoginModal } from './LoginModal';
-export { default as RegisterModal } from './RegisterModal';
-export { default as DeleteButton } from './DeleteButton';
