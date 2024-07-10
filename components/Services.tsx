@@ -1,25 +1,24 @@
 "use client";
+import axios from "axios";
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { TservicesProps } from "@types";
 
 export default function Services() {
-	const [data, setData] = useState<TservicesProps[]>();
+	const [data, setData] = useState([]);
 	useEffect(() => {
-		async function getData() {
-			const data = await fetch(
-				"https://kromin-webiste-admin-panel-devwithzain.vercel.app/api/post",
-				{ mode: "no-cors" },
-			);
-			const response = await data.json();
-			setData(response);
+		async function fetchData() {
+			try {
+				const response = await axios.get("/api/post");
+				setData(response.data);
+			} catch (error) {
+				console.error("Error fetching data:", error);
+			}
 		}
-		getData();
+		fetchData();
 	}, []);
 
-	console.log(data);
 	const container = useRef(null);
 
 	const { scrollYProgress } = useScroll({
