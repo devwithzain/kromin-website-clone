@@ -1,30 +1,25 @@
+"use client";
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
+import { TservicesProps } from "@types";
 
 export default function Services() {
-	const [data, setData] = useState([]);
-
+	const [data, setData] = useState<TservicesProps[]>();
 	useEffect(() => {
-		async function fetchData() {
-			try {
-				const response = await fetch(
-					"https://kromin-webiste-admin-panel-devwithzain.vercel.app/api/post",
-				);
-				if (!response.ok) {
-					throw new Error("Network response was not ok");
-				}
-				const data = await response.json();
-				setData(data);
-			} catch (error) {
-				console.error("Error fetching data:", error);
-			}
+		async function getData() {
+			const data = await fetch(
+				"https://kromin-webiste-admin-panel-devwithzain.vercel.app/api/post",
+				{ mode: "no-cors" },
+			);
+			const response = await data.json();
+			setData(response);
 		}
-
-		fetchData();
+		getData();
 	}, []);
 
+	console.log(data);
 	const container = useRef(null);
 
 	const { scrollYProgress } = useScroll({
@@ -82,32 +77,35 @@ export default function Services() {
 						The proactivity of our approach facilitates teamwork with our
 						clients, making us proud of what we do.
 					</motion.p>
-					{data &&
-						data.map((item) => (
-							<motion.div
-								key={item.id}
-								initial={{ y: 100 }}
-								whileInView={{ y: 0 }}
-								viewport={{ once: true }}
-								transition={{ duration: 1, ease: "easeInOut" }}
-								className="flex flex-col gap-4">
-								<Image
-									src={item.imageUrl}
-									alt={item.title}
-									width={80}
-									height={80}
-									className="w-[80px] h-[80px]"
-								/>
-								<motion.h1 className="text-[18px] leading-none font-extrabold text-[#b84ff8]">
-									{item.title}
-								</motion.h1>
-								<motion.p
-									className="font-[Muli] text-[20px] leading-[40px]"
-									style={{ color: textColor }}>
-									{item.description}
-								</motion.p>
-							</motion.div>
-						))}
+					{data && (
+						<>
+							{data.map((item) => (
+								<motion.div
+									initial={{ y: 100 }}
+									whileInView={{ y: 0 }}
+									viewport={{ once: true }}
+									transition={{ duration: 1, ease: "easeInOut" }}
+									className="flex flex-col gap-4"
+									key={item.id}>
+									<Image
+										src={item.imageUrl}
+										alt={item.title}
+										width={80}
+										height={80}
+										className="w-[80px] h-[80px]"
+									/>
+									<motion.h1 className="text-[18px] leading-none font-extrabold text-[#b84ff8]">
+										{item.title}
+									</motion.h1>
+									<motion.p
+										className="font-[Muli] text-[20px] leading-[40px]"
+										style={{ color: textColor }}>
+										{item.description}
+									</motion.p>
+								</motion.div>
+							))}
+						</>
+					)}
 				</motion.div>
 			</motion.div>
 		</motion.section>
