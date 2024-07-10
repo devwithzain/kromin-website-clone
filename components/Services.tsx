@@ -4,9 +4,10 @@ import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
+import { TservicesProps } from "@types";
 
 export default function Services() {
-	const [data, setData] = useState([]);
+	const [data, setData] = useState<TservicesProps[]>([]);
 	useEffect(() => {
 		async function fetchData() {
 			try {
