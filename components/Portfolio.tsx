@@ -1,12 +1,26 @@
 "use client";
+import axios from "axios";
 import { motion } from "framer-motion";
-import { portfolioItems } from "@constants";
+import { TprocessProps } from "@types";
+import { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function Portfolio() {
+	const [data, setData] = useState<TprocessProps[]>([]);
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				const response = await axios.get("/api/process");
+				setData(response.data);
+			} catch (error) {
+				console.error("Error fetching data:", error);
+			}
+		}
+		fetchData();
+	}, []);
 	return (
 		<motion.section className="w-full padding-y bg-white">
-			{portfolioItems.map((item) => (
+			{data.map((item) => (
 				<motion.div
 					key={item.id}
 					className="w-[70%] sm:w-full xm:w-full mx-auto flex sm:flex-col xm:flex-col gap-10 padding-x mb-10">
@@ -17,7 +31,7 @@ export default function Portfolio() {
 								loop
 								muted
 								autoPlay
-								src={item.src}
+								src={item.videoUrl}
 							/>
 						</div>
 					</motion.div>
@@ -32,7 +46,7 @@ export default function Portfolio() {
 							{item.title}
 						</motion.h1>
 						<motion.p className="font-[Muli] text-[30px] text-[#1d0f41ab] leading-[40px] font-medium">
-							{item.para}
+							{item.description}
 						</motion.p>
 						<motion.div className="w-fit sm:w-full xm:w-full flex items-center gap-6 rounded-full group">
 							<motion.p className="text-[16px] cursor-pointer uppercase tracking-wider font-bold text-[#1d0f41]">

@@ -38,3 +38,10 @@ export type TservicesProps = {
    title: string;
    description: string;
 };
+
+export type TprocessProps = {
+   id: string;
+   title: string;
+   description: string;
+   videoUrl: string;
+};

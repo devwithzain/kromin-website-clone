@@ -1,4 +1,4 @@
-import { compony, digital, partner1, partner10, partner11, partner12, partner13, partner14, partner15, partner16, partner17, partner18, partner19, partner2, partner3, partner4, partner5, partner6, partner7, partner8, partner9, potential } from "@public";
+import { partner1, partner10, partner11, partner12, partner13, partner14, partner15, partner16, partner17, partner18, partner19, partner2, partner3, partner4, partner5, partner6, partner7, partner8, partner9 } from "@public";
 
 export const navLinks = [
     {
@@ -116,60 +116,6 @@ export const skillsData = [
     {
         id: 19,
         src: partner19
-    },
-];
-
-export const servicesItems = [
-    {
-        id: 1,
-        title: "DIGITAL NATIVES",
-        src: digital,
-        para: "Data, experience and innovation inspire our approach. We focus on innovation, researching new digital technologies deliver new solutions and services."
-    },
-    {
-        id: 2,
-        title: "COMPANY NETWORK",
-        src: compony,
-        para: "We have a solid network of digital players who, like us, believe in innovation and contribute to the success of our projects."
-    },
-    {
-        id: 3,
-        title: "MULTIPOTENTIAL",
-        src: potential,
-        para: "Each member of the Team takes part in the Kromin project with his own skills. We love groups of highly competent peopl Our Corporate Culture makes us a moving machine focused and strategic choices. We ask our clients to get to the teams working on the project personally, to give a face and voice to each team member working on the project and its goals."
-    },
-];
-
-export const portfolioItems = [
-    {
-        id: 1,
-        title: "Jago",
-        src: "./jago.mp4",
-        para: "The new interactive platform that shows Jago through his Art"
-    },
-    {
-        id: 2,
-        title: "Translated",
-        src: "./translated.mp4",
-        para: "Professional translation service"
-    },
-    {
-        id: 3,
-        title: "Audi Roma",
-        src: "./audi.mp4",
-        para: "A new corporate sales process"
-    },
-    {
-        id: 4,
-        title: "Maui Jim",
-        src: "./maui.mp4",
-        para: "Increase productivity in stores"
-    },
-    {
-        id: 5,
-        title: "Acea",
-        src: "./acea.mp4",
-        para: "The 20/24 Digital Business Plan"
     },
 ];
 
