@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import Image from "next/image";
 import { TservicesProps } from "@types";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -10,8 +11,8 @@ export default function Services() {
 	useEffect(() => {
 		async function fetchData() {
 			try {
-				const response = await fetch("/api/post", { cache: "no-store" });
-				setData(await response.json());
+				const response = await axios.get("/api/post");
+				setData(response.data);
 			} catch (error) {
 				console.error("Error fetching data:", error);
 			}
