@@ -3,8 +3,8 @@ import { Footer } from "@components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Kromin | Data Driven Agency",
-	description: "Kromin | Data Driven Agency",
+	title: "Kromin - Data Driven Agency",
+	description: "Kromin - Data Driven Agency",
 };
 
 export default function RootLayout({
