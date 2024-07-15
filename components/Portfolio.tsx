@@ -1,5 +1,4 @@
 "use client";
-import axios from "axios";
 import { motion } from "framer-motion";
 import { TprocessProps } from "@types";
 import { useEffect, useState } from "react";
@@ -10,8 +9,8 @@ export default function Portfolio() {
 	useEffect(() => {
 		async function fetchData() {
 			try {
-				const response = await axios.get("/api/process");
-				setData(response.data);
+				const response = await fetch("/api/process", { cache: "no-store" });
+				setData(await response.json());
 			} catch (error) {
 				console.error("Error fetching data:", error);
 			}
