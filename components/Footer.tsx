@@ -29,8 +29,13 @@ export default function Footer() {
 							/>
 						</Link>
 						<p className="text-[16px] text-white tracking-wider font-medium">
-							Let&apos;s create new opportunities together. <br /> Tell us about
-							your vision.
+							Let&apos;s join forces to create exciting new opportunities
+							together.
+							<br />
+							Share your vision with us, and let’s explore how we can turn your{" "}
+							<br />
+							ideas into reality. Your insights and creativity are the <br />{" "}
+							key to our mutual success.
 						</p>
 					</div>
 					<div className="flex items-center gap-2">

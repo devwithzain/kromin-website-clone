@@ -45,3 +45,11 @@ export type TprocessProps = {
    description: string;
    videoUrl: string;
 };
+
+export type TservicesPageProps = {
+   id: string;
+   title: string;
+   description: string;
+   listOne: string;
+   listTwo: string;
+};
